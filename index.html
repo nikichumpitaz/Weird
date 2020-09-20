@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            background-image: url('img/10.jpg'); 
+            background-size: cover;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            position: fixed;
+            position: absolute;
+            top:10%;
+            bottom: 0;
+            left: 25%;
+            right: 20%;
+            margin: auto;
+        }
+
+        .item { 
+            width: 200px;
+            height: 200px;
+            margin-top: 50px;
+            margin-left: 50px;
+
+        }
+
+        .item img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .item :hover {
+            transform: scale(1.2);
+        }
+
+
+    </style>
+
+<script src="libs/howler.js"></script>
+
+    <title>Weird</title>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            <img src="img/0.jpg" onclick="playSound(sound0)">
+        </div>
+        <div class="item">
+            <img src="img/1.jpg" onclick="playSound(sound1)">
+        </div>
+        <div class="item">
+            <img src="img/2.jpg" onclick="playSound(sound2)">
+        </div>
+        <div class="item">
+            <img src="img/3.jpg" onclick="playSound(sound3)">
+        </div>
+        <div class="item">
+            <img src="img/4.jpg" onclick="playSound(sound4)">
+        </div>
+        <div class="item">
+            <img src="img/5.jpg" onclick="playSound(sound5)">
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+<script>
+    const sound0 = new Howl({ src: 'sounds/0.mp3' });
+    const sound1 = new Howl({ src: 'sounds/1.mp3' });
+    const sound2 = new Howl({ src: 'sounds/2.mp3' });
+    const sound3 = new Howl({ src: 'sounds/3.mp3' });
+    const sound4 = new Howl({ src: 'sounds/4.mp3' });
+    const sound5 = new Howl({ src: 'sounds/5.mp3' });
+    const sound6 = new Howl({ src: 'sounds/6.mp3' });
+
+    console.log(sound0);
+
+    const playSound = (sound) => {
+    sound.play();
+}
+
+</script>
+
+
+</html>
+>
